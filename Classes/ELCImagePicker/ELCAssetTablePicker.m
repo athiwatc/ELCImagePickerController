@@ -63,6 +63,9 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+}
+
+- (void)dealloc {
     [[ELCConsole mainConsole] removeAllIndex];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:ALAssetsLibraryChangedNotification object:nil];
 }
